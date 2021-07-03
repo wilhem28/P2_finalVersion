@@ -239,7 +239,8 @@ input{
 .container-examples-house{
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 0 20px;
 }
 .example-house{
     display: flex;
@@ -276,8 +277,8 @@ h2{
     width: 100%;
     font-size: 1.1em;
     font-weight: bold;
-    padding: 40px 0 44px 0;
-    margin: 0 4.32%;
+    padding: 40px 20px 44px 20px;
+    
 }
 .example-house:nth-child(1) .fas.fa-star:nth-child(5),
 .example-house:nth-child(2) .fas.fa-star:nth-child(5),
