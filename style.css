@@ -686,6 +686,7 @@ header{
 .title-house{
     display: flex;
     justify-content: flex-start;
+    margin: 0 4.32%;
 }
 .photo-example-house{
     height: 220px;
