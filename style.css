@@ -232,7 +232,7 @@ input{
 }
 .title-house{
     width: 100%;
-    margin: 0 4.32%;
+    margin: 0 20px;
     font-size: 1.4rem;
     padding: 45px 0 0 0;
 }
@@ -240,7 +240,6 @@ input{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    padding: 0 4.32%;
 }
 .example-house{
     display: flex;
@@ -554,7 +553,7 @@ main{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
-    padding: 18px;
+    padding: 30px 18px 0 18px;
 }
 .activity-1{
     width: 100%;
