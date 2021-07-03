@@ -1,0 +1,855 @@
+/* ------------------------------- GENERAL -------------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+}
+body{
+    width: 100%;
+    height: 100vh
+}
+/* ------------------------------- HEADER -------------------------- */
+header{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 0 50px;
+}
+ul{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 100%;
+}
+ul li{
+    display: flex;
+    border-top: 2px solid #ffffff;
+    font-size: 1rem;
+    list-style: none;
+}
+
+ul li a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    padding: 27px 20px 0 26px;
+} 
+ul li:nth-child(2):hover,
+ul li:nth-child(3):hover,
+ul li:nth-child(4):hover{
+    border-top: 2px solid #0065fc;
+}
+ul li a:hover{
+    color: #0065fc;
+}
+ul li:nth-child(1){
+    padding-top: 44px;
+    flex-grow: 1;
+}
+ul li:nth-child(2), ul li:nth-child(3), ul li:nth-child(4){
+    display: flex;
+}
+ul li:nth-child(4) a{
+    font-weight: bolder;
+    color: #0065fc;
+}
+
+/* ------------------------------- MAIN -------------------------- */
+main{
+    padding: 0 50px;
+}
+/* main text */
+h1{
+    font-size: 1.3rem;
+    color: black;
+    padding-top: 34px;
+}
+.description{
+    padding-top: 6px;
+    font-size: 0.95rem;
+    color: black;
+}
+/* main selection */
+.selection{
+    display: flex;
+    flex-direction: row nowrap;
+    height: 50px;
+    border-right: 0px;
+    margin: 20px 0 31px 0;
+}
+.location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50px;
+    padding: 16px 20px 15px 18px;
+    background-color: #f2f2f2;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+input{
+    width: 250px;
+    border: none;
+    padding: 14px 15px 14px 13px;
+    border: 1px solid #f2f2f2;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+.disappear{
+    display: flex;
+    justify-content: center;
+    margin-left: -15px;
+}
+.submit{
+    display: flex;
+    color: #f2f2f2;
+    background-color: #0065fc;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 13px 17px;
+}
+.fas.fa-search{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #0065fc;
+    color: #ffffff;
+    padding: 17px;
+    border-radius: 15px;
+}
+/* main filters */
+.filters{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    font-weight: bolder;
+    width: 100%;
+    padding-bottom: 31px;
+    padding-left: 10px;
+}
+.filters-title{
+    display: flex;
+    align-items: center;
+    font-size: 1.05rem;
+    margin-right: 32px;
+}
+.container-filter-item {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    border-top: 2px solid #d9d9d9;
+    border-bottom: 2px solid #d9d9d9;
+    border-right: 2px solid #d9d9d9;
+    border-left: 0;
+    border-radius: 50px;
+    margin-right: 24px;
+    cursor: pointer;
+}
+.text-nowrap{
+    display: flex;
+    flex-flow: row nowrap;
+}
+.container-filter-item:hover{
+    background-color: #deebff;
+    border-top: 2px solid #deebff;
+    border-bottom: 2px solid #deebff;
+    border-right: 2px solid #deebff;
+    border-left: 0;
+    color: #0065fc;
+    transition: 0.4s ease;
+}
+.fas.fa-money-bill-wave, 
+.fas.fa-heart, 
+.fas.fa-dog, 
+.fas.fa-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #deebff;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    color: #0065fc;
+    margin-right: 9px;
+}
+.item {
+    font-size: 1rem;
+    text-align: justify;
+    font-weight: bolder;
+    padding: 17px 18px 17px 0px;
+}
+/* main information */
+.information{ 
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.fas.fa-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 25px;
+    font-size: 1rem;
+    border-radius: 50%;
+    border: 1px solid #d9d9d9;
+    color: #0065fc;
+}
+.information-paragraph{
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    padding-left: 10px;
+}
+.euro{
+    font-size: 0.8rem;
+    font-weight: bolder;
+}
+/* ------------------------------- main section examples -------------------------- */
+#examples{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+/* house */
+.house{
+    display: flex;
+    flex-flow: row wrap;
+    width: 65.7%;
+    background-color: #f2f2f2;
+    border-radius: 15px;
+}
+.title-house{
+    width: 100%;
+    margin: 0 4.32%;
+    font-size: 1.4rem;
+    padding: 45px 0 0 0;
+}
+.container-examples-house{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 0 4.32%;
+}
+.example-house{
+    display: flex;
+    flex-flow: column nowrap;
+    /* width: 236px; */
+    width: 28.42%;
+    height: 189px;
+    border : 5px solid white;
+    border-radius: 20px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0px 1px 10px 0.5px rgb(201, 200, 200);
+    margin-top: 28px;
+}
+.photo-example-house{
+    object-fit: cover;
+    height: 114px;
+    width: 100%;
+}
+.description-house{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    font-size: 1rem;
+    padding-left: 9px;
+}
+h2{
+    font-size: 0.9rem;
+}
+.description-house h4{
+    font-size: 0.9rem;
+}
+.bold{
+    width: 100%;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 40px 0 44px 0;
+    margin: 0 4.32%;
+}
+.example-house:nth-child(1) .fas.fa-star:nth-child(5),
+.example-house:nth-child(2) .fas.fa-star:nth-child(5),
+.example-house:nth-child(3) .fas.fa-star:nth-child(5),
+.example-house:nth-child(4) .fas.fa-star:nth-child(4),
+.example-house:nth-child(4) .fas.fa-star:nth-child(5),
+.example-house:nth-child(5) .fas.fa-star:nth-child(5),
+.example-house:nth-child(6) .fas.fa-star:nth-child(5){
+    color: #d9d9d9;
+    font-size: 0.5rem;
+}
+/* house & popular : stars more-information */
+.stars .fas.fa-star{
+    display: inline-flex;
+    color: #0065fc;
+    font-size: 0.5rem;
+}
+p.more-information{
+    font-size: 0.8rem;
+    color: black;
+    font-weight: 500;
+}
+/* popular */
+.popular{
+    width: 31.3%;
+    background-color: #f2f2f2;
+    border-radius: 15px;
+}
+.container-examples-popular{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-top: 28px;
+}
+.example-popular {
+    display: flex;
+    height: 134px;
+    width: 81.67%;
+    min-width: 343px;
+    border : 5px solid white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 1px 10px 0.5px rgb(201, 200, 200);
+    margin-bottom: 31px;
+}
+.example-popular a{
+    width: 37.7%;
+}
+.photo-popular{
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+}
+.title-popular{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 45px 0 0 0;
+    width: 81.67%;
+    min-width: 343px;
+    margin: 0 auto;
+}
+.title-popular h2{
+    font-size: 1.4rem;
+}
+.fas.fa-chart-line{
+     font-size: 1.4em;
+}
+.example-popular:nth-child(2) .fas.fa-star:nth-child(5),
+.example-popular:nth-child(3) .fas.fa-star:nth-child(5){
+    color: #d9d9d9;
+    font-size: 0.5rem;
+}
+.description-popular{
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 10px 0 0 21px;
+    width: calc(100% - 37.7%);
+    background-color: #ffffff;
+}
+.description-popular h2{
+    font-size: 0.9rem;
+}
+.description-popular .stars{
+    padding-top: 30px;
+}
+/* ------------------------------- main section activities -------------------------- */
+#activities{
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    padding-top: 63px;
+}
+#activities h2{
+    font-size: 1.4rem;
+}
+#activities h2 a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.4375rem;
+    cursor: pointer;
+}
+.examples-activities{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 26px;
+}
+.location-activity{
+    padding: 10px 0 10px 18px;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+.activity-1{
+    /* width: 302px; */
+    width: 20.97%;
+    height: 445px;
+    border-radius: 20px;
+    box-shadow: 0px 3px 5px 1px rgb(224, 223, 223);
+    overflow: hidden;
+}
+.activity-2, .activity-4{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    /* width: 302px; */
+    width: 20.97%;
+    height: 445px;
+}
+.activity-2-up{
+    height: 236px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 3px 5px 1px rgb(224, 223, 223);
+}
+.activity-2-down{
+    height: 165px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 3px 5px 1px rgb(224, 223, 223);
+}
+.activity-2 .photo-up{
+    height: 179px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.activity-2 .photo-down{
+    height: 109px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.activity-1-photo-1{
+    height: 388px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+.activity-4-up{
+    height: 195px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0px 3px 5px 1px rgb(224, 223, 223);
+}
+.activity-4-down{
+    height: 208px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0px 3px 5px 1px rgb(224, 223, 223);
+}
+.photo-activity-4-up{
+    height: 140px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.photo-activity-4-down{
+    height: 153px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+/* ------------------------------- FOOTER -------------------------- */
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #f2f2f2;
+    font-size: 1.1em;
+    margin-top: 55px;
+    padding: 0 0 90px 50px;
+}
+.footer-part {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    width: calc(100% / 3);
+    padding-left: 20px;
+    line-height: 20px;
+}
+h3{
+    font-size: 1.4rem;
+    padding: 49px 0px 15px 0px;
+}
+.invisible {
+    color: #f2f2f2;
+}
+.footer-part-ajust{
+    font-size: 1em;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+
+@media  screen and (max-width: 1439px) {
+/* ------------------------------- HEADER -------------------------- */
+header{
+    padding: 0 20px;
+}
+.container-filter-item{
+    margin-bottom: 13px;
+} 
+/* ------------------------------- MAIN -------------------------- */
+main{
+    padding: 0;
+}
+/* main text */
+.text{
+    padding: 0 20px;
+}
+/* main selection */
+.selection{
+    padding: 0 20px;
+}
+.submit{
+        display: none;
+}
+.search{
+    display: flex;
+    border-radius: 15px;
+}
+.fas.fa-search{
+        display: flex;
+        border-radius: 15px;
+}
+/* main filters */
+.filters{
+    padding: 0 20px;
+}
+.filters-title{
+    padding-bottom: 13px;
+}
+/* main information */
+.information{ 
+    padding: 17px 21px 0 21px;
+}
+.fas.fa-info {
+    min-width: 25px;
+}
+/* ------------------------------- main section activities -------------------------- */
+.examples-activities{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    padding: 18px;
+}
+.activity-1{
+    width: 100%;
+    height: 445px;
+    border-radius: 20px;
+    box-shadow: 0px 3px 5px 1px rgb(224, 223, 223);
+    overflow: hidden;
+}
+/* house */
+.house{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 0;
+}
+.title-house{
+    display: flex;
+    justify-content: center;
+}
+.container-examples-house{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    padding: 0 4.32%;
+    width: 100%;
+}
+.example-house{
+    width: 90%;
+    height: 320px;
+}
+.photo-example-house{
+    height: 200px;
+    width: 100%;
+}
+.description-house{
+    height: 110px;
+    background-color: #ffffff;
+}
+.description-house .stars .fas.fa-star{
+    display: inline-flex;
+    color: #0065fc;
+    font-size: 0.9rem;
+    padding-top: 3%;
+}
+.example-house:nth-child(1) .fas.fa-star:nth-child(5),
+.example-house:nth-child(2) .fas.fa-star:nth-child(5),
+.example-house:nth-child(3) .fas.fa-star:nth-child(5),
+.example-house:nth-child(4) .fas.fa-star:nth-child(4),
+.example-house:nth-child(4) .fas.fa-star:nth-child(5),
+.example-house:nth-child(5) .fas.fa-star:nth-child(5),
+.example-house:nth-child(6) .fas.fa-star:nth-child(5){
+    color: #d9d9d9;
+    font-size: 0.9rem;
+}
+/* popular */
+.popular{
+    width: 100%;
+    background-color: #f2f2f2;
+    border-radius: 0;
+    order: -1;
+}
+.container-examples-popular{
+    margin: 28px auto;
+    width: 80%;
+}
+.title-popular{
+    width: 80%;
+}
+.example-popular {
+    height: 200px;
+}
+.example-popular a{
+    width: 50%;
+}
+.description-popular .stars .fas.fa-star {
+    display: inline-flex;
+    color: #0065fc;
+    font-size: 0.9rem;
+    padding-top: 3%;
+}
+.example-popular:nth-child(2) .fas.fa-star:nth-child(5),
+.example-popular:nth-child(3) .fas.fa-star:nth-child(5){
+    color: #d9d9d9;
+    font-size: 0.9rem;
+}
+/* ------------------------------- main section activities -------------------------- */
+#activities h2{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.activity-1{
+    order: 1;
+    width: 80%;
+    height: 300px;  
+}
+.activity-2, .activity-4{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    width: 80%;
+    height: auto;
+}
+.activity-2-up,
+.activity-2-down,
+.activity-4-up,
+.activity-4-down{
+    height: 300px;
+    margin-bottom: 30px;
+}
+.activity-1-photo-1,
+.activity-2 .photo-up,
+.activity-2 .photo-down,
+.photo-activity-4-up,
+.photo-activity-4-down{
+    height: 80%;
+}
+
+}
+@media screen and (max-width: 768px)
+{
+/* ------------------------------- HEADER -------------------------- */
+header{
+    padding: 0;
+}
+.logo{
+    padding-left: 21px;
+}
+/* house */
+.title-house{
+    display: flex;
+    justify-content: flex-start;
+}
+.photo-example-house{
+    height: 220px;
+    width: 100%;
+}
+/* ------------------------------- MAIN -------------------------- */
+/* main text */
+.text{
+    padding: 0 21px;
+}
+/* main selection */
+.selection{
+    padding: 0 21px;
+}
+/* main selection */
+.selection{
+    padding: 0 21px;
+}
+
+/* ------------------------------- main section activities -------------------------- */
+#activities{
+    padding-top: 10px;
+}
+#activities h2{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0 4.32%;
+}
+/* ------------------------------- FOOTER -------------------------- */
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #f2f2f2;
+    font-size: 1.1em;
+    margin-top: 55px;
+    padding: 0 0 90px 30%;
+}
+.footer-part {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    padding-left: 28px;
+    line-height: 20px;
+    width: 100%;
+}
+ 
+}
+@media screen and (max-width: 600px){
+
+ul li:nth-child(2),
+ul li:nth-child(3){
+    justify-content: center;
+    width: 50%;
+    padding-bottom: 11px;
+    border-top: none;
+    border-top: 2px solid #ffffff;
+    border-bottom: 3px solid #f2f2f2;
+    order: 1;
+}
+ul li:nth-child(2):hover,
+ul li:nth-child(3):hover{
+    border-top: 2px solid #ffffff;
+    border-bottom: 3px solid #0065fc;
+}
+ul li:nth-child(4){
+    justify-content: flex-end;
+    width: 50%;
+    padding-right: 18px;
+    border-bottom: 3px solid #ffffff;
+}
+ul li:nth-child(4):hover{
+    
+    border-top: 2px solid #ffffff;
+}
+ul li a{
+    padding: 28px 0 11px 0;
+}
+
+/* main filters */
+.filters{
+    padding: 0 20px;
+}
+.container-filter-item:nth-child(2){
+    margin-right: 11px;
+}
+.container-filter-item:nth-child(3){
+    margin-right: 0;
+}
+.filters-title{
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+/* ------------------------------- main section activities -------------------------- */
+.examples-activities{
+    grid-template-columns: none;
+    justify-content: center;
+}
+#activities h2{
+    font-size: 1.4rem;
+    padding-left: 18px;
+}
+.activity-1,
+.activity-2-up,
+.activity-2-down,
+.activity-4-up,
+.activity-4-down{
+    width: 100%;
+    min-width: 343px;
+    height: 190px;
+    margin-bottom: 30px;
+}
+.activity-2, .activity-4{
+    width: 100%;
+}
+/* house */
+.container-examples-house{
+    display: grid;
+    grid-template-columns: none;
+}
+.example-house{
+    width: 335px;
+    height: 199px;
+}
+.photo-example-house{
+    height: 114px;
+    width: 100%;
+}
+/* popular */
+.title-popular{
+    width: 80%;
+}
+.example-popular {
+    height: 134px;
+    width: auto;
+}
+.example-popular a{
+    width: 37.7%;
+}
+/* ------------------------------- FOOTER -------------------------- */
+footer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #f2f2f2;
+    font-size: 1.1em;
+    margin-top: 55px;
+    padding: 0 0 90px 0;
+}
+
+}
+@media screen and (max-width: 375px){
+
+ul li:nth-child(4) a{
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+}
+
+
