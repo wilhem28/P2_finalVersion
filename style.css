@@ -504,13 +504,13 @@ h3{
     font-weight: bolder;
     padding-bottom: 23px;
 }
-.invisible {
-    color: #f2f2f2;
-}
 .footer-part-ajust{
     font-size: 1em;
     font-weight: 500;
     line-height: 30px;
+}
+.footer-part:nth-child(2) .footer-part-ajust:nth-child(4), .footer-part:nth-child(3) .footer-part-ajust:nth-child(4){
+    color: #ffffff;
 }
 
 @media  screen and (max-width: 1439px) {
