@@ -10,6 +10,9 @@ body{
     width: 100%;
     height: 100vh
 }
+a{
+    display: flex;
+}
 /* ------------------------------- HEADER -------------------------- */
 header{
     display: flex;
@@ -232,20 +235,18 @@ input{
 }
 .title-house{
     width: 100%;
-    margin: 0 20px;
     font-size: 1.4rem;
-    padding: 45px 0 0 0;
+    padding: 45px 4.54% 0 4.54%;
 }
 .container-examples-house{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 4.54%;
 }
 .example-house{
     display: flex;
     flex-flow: column nowrap;
-    /* width: 236px; */
     width: 28.42%;
     height: 189px;
     border : 5px solid white;
@@ -263,7 +264,7 @@ input{
 .description-house{
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
     font-size: 1rem;
     padding-left: 9px;
 }
@@ -277,8 +278,8 @@ h2{
     width: 100%;
     font-size: 1.1em;
     font-weight: bold;
-    padding: 40px 20px 44px 20px;
-    
+    padding: 40px 0 44px 0;
+    margin: 0 4.54%;
 }
 .example-house:nth-child(1) .fas.fa-star:nth-child(5),
 .example-house:nth-child(2) .fas.fa-star:nth-child(5),
@@ -312,11 +313,12 @@ p.more-information{
     flex-flow: column nowrap;
     align-items: center;
     margin-top: 28px;
+    padding: 0 4.54%;
 }
 .example-popular {
     display: flex;
     height: 134px;
-    width: 81.67%;
+    width: 100%;
     min-width: 343px;
     border : 5px solid white;
     border-radius: 20px;
@@ -338,10 +340,10 @@ p.more-information{
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    padding: 45px 0 0 0;
-    width: 81.67%;
+    padding: 45px 4.54% 0 4.54%;
+    width: 100%;
     min-width: 343px;
-    margin: 0 auto;
+
 }
 .title-popular h2{
     font-size: 1.4rem;
@@ -375,6 +377,7 @@ p.more-information{
     padding-top: 63px;
 }
 #activities h2{
+    display: flex;
     font-size: 1.4rem;
 }
 #activities h2 a{
@@ -390,8 +393,13 @@ p.more-information{
     width: 100%;
     padding-top: 26px;
 }
+.container-location-activity{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding-left: 20px;
+}
 .location-activity{
-    padding: 10px 0 10px 18px;
     font-size: 1rem;
     font-weight: bolder;
 }
@@ -423,7 +431,10 @@ p.more-information{
     border-radius: 20px;
     box-shadow: 0px 3px 5px 1px rgb(224, 223, 223);
 }
-.activity-2 .photo-up{
+.activity-1-photo-1, .photo-up a, .photo-doaw a, .photo-activity-4-up, .photo-activity-4-down a{
+    display: flex;
+}
+.photo-up{
     height: 179px;
     width: 100%;
     object-fit: cover;
@@ -432,7 +443,7 @@ p.more-information{
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
 }
-.activity-2 .photo-down{
+.photo-down{
     height: 109px;
     width: 100%;
     object-fit: cover;
@@ -481,19 +492,17 @@ footer {
     background-color: #f2f2f2;
     font-size: 1.1em;
     margin-top: 55px;
-    padding: 0 0 90px 50px;
+    padding: 47px 50px 55px 50px;;
 }
 .footer-part {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-evenly;
     width: calc(100% / 3);
-    padding-left: 20px;
-    line-height: 20px;
 }
 h3{
-    font-size: 1.4rem;
-    padding: 49px 0px 15px 0px;
+    font-size: 1.15rem;
+    font-weight: bolder;
+    padding-bottom: 23px;
 }
 .invisible {
     color: #f2f2f2;
@@ -501,7 +510,7 @@ h3{
 .footer-part-ajust{
     font-size: 1em;
     font-weight: 500;
-    padding-bottom: 10px;
+    line-height: 30px;
 }
 
 @media  screen and (max-width: 1439px) {
@@ -554,7 +563,6 @@ main{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
-    padding: 30px 18px 0 18px;
 }
 .activity-1{
     width: 100%;
@@ -571,18 +579,15 @@ main{
     background-color: #ffffff;
     border-radius: 0;
 }
-.title-house{
-    display: flex;
-    justify-content: center;
-}
 .container-examples-house{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
+    grid-column-gap: 5%;
+    align-content: space-between;
     width: 100%;
 }
 .example-house{
-    width: 90%;
+    width: 100%;
     height: 320px;
 }
 .photo-example-house{
@@ -618,10 +623,7 @@ main{
 }
 .container-examples-popular{
     margin: 28px auto;
-    width: 80%;
-}
-.title-popular{
-    width: 80%;
+    width: 100%;
 }
 .example-popular {
     height: 200px;
@@ -643,8 +645,8 @@ main{
 /* ------------------------------- main section activities -------------------------- */
 #activities h2{
     display: flex;
-    justify-content: center;
     width: 100%;
+    padding: 0 4.54%;
 }
 .activity-1{
     order: 1;
@@ -670,7 +672,10 @@ main{
 .activity-2 .photo-down,
 .photo-activity-4-up,
 .photo-activity-4-down{
-    height: 80%;
+    height: 240px;
+}
+.container-location-activity{
+    height: 60px;
 }
 
 }
@@ -684,11 +689,7 @@ header{
     padding-left: 21px;
 }
 /* house */
-.title-house{
-    display: flex;
-    justify-content: flex-start;
-    margin: 0 4.32%;
-}
+
 .photo-example-house{
     height: 220px;
     width: 100%;
@@ -725,16 +726,21 @@ footer {
     background-color: #f2f2f2;
     font-size: 1.1em;
     margin-top: 55px;
-    padding: 0 0 90px 30%;
+    padding: 0 4.54%;
+    padding-top: 47px;
+    padding-bottom: 28px;
 }
 .footer-part {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-evenly;
-    padding-left: 28px;
     line-height: 20px;
     width: 100%;
 }
+.footer-part:nth-child(1), .footer-part:nth-child(2){
+    padding-bottom: 43px;
+}
+
  
 }
 @media screen and (max-width: 600px){
@@ -787,10 +793,11 @@ ul li a{
 .examples-activities{
     grid-template-columns: none;
     justify-content: center;
+    padding: 28px 4.54% 0 4.54%;
 }
 #activities h2{
     font-size: 1.4rem;
-    padding-left: 18px;
+    padding: 0 4.54%;
 }
 .activity-1,
 .activity-2-up,
@@ -804,6 +811,12 @@ ul li a{
 }
 .activity-2, .activity-4{
     width: 100%;
+}
+.activity-1-photo-1, .activity-2 .photo-up, .activity-2 .photo-down, .photo-activity-4-up, .photo-activity-4-down {
+    height: 134px;
+}
+.container-location-activity {
+    height: 55px;
 }
 /* house */
 .container-examples-house{
@@ -819,9 +832,6 @@ ul li a{
     width: 100%;
 }
 /* popular */
-.title-popular{
-    width: 80%;
-}
 .example-popular {
     height: 134px;
     width: auto;
@@ -838,7 +848,9 @@ footer{
     background-color: #f2f2f2;
     font-size: 1.1em;
     margin-top: 55px;
-    padding: 0 0 90px 0;
+    padding: 0 4.54%;
+    padding-top: 47px;
+    padding-bottom: 28px;
 }
 
 }
@@ -848,6 +860,15 @@ ul li:nth-child(4) a{
     justify-content: flex-end;
     align-items: flex-end;
 }
+/* popular */
+.example-popular {
+    margin: 0 21px 11px 21px;
+}
+/* house */
+.example-house{
+    min-width: 343px;
+}
+
 
 }
 
