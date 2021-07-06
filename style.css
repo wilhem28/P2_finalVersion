@@ -502,7 +502,7 @@ footer {
 h3{
     font-size: 1.15rem;
     font-weight: bolder;
-    padding-bottom: 23px;
+    padding-bottom: 19px;
 }
 .footer-part-ajust{
     font-size: 1em;
@@ -675,6 +675,8 @@ main{
     height: 240px;
 }
 .container-location-activity{
+    display: flex;
+    align-items: center;
     height: 60px;
 }
 
