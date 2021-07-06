@@ -499,7 +499,7 @@ footer {
     flex-flow: column nowrap;
     width: calc(100% / 3);
 }
-h3{
+.footer-part h3{
     font-size: 1.15rem;
     font-weight: bolder;
     padding-bottom: 19px;
