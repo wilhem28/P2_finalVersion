@@ -12,6 +12,8 @@ body {
 }
 a {
   display: flex;
+  text-decoration: none;
+  color: #000000;
 }
 /* ------------------------------- HEADER -------------------------- */
 header {
@@ -246,10 +248,14 @@ input {
   justify-content: space-between;
   padding: 0 4.54%;
 }
+.container-examples-house a{
+  width: 26.81%;
+  min-width: 225px;
+}
 .example-house {
   display: flex;
   flex-flow: column nowrap;
-  width: 28.42%;
+  width: 100%;
   height: 189px;
   border: 5px solid white;
   border-radius: 20px;
@@ -258,17 +264,22 @@ input {
   box-shadow: 0px 1px 10px 0.5px rgb(201, 200, 200);
   margin-top: 28px;
 }
+.container-photo-example-house{
+  width: 100%;
+  height: 60.32%;
+}
 .photo-example-house {
   object-fit: cover;
-  height: 114px;
+  height: 100%;
   width: 100%;
 }
 .description-house {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
   font-size: 1rem;
-  padding-left: 9px;
+  height: calc(189px - 114px);
+  padding: 4px 9px;
 }
 h2 {
   font-size: 0.9rem;
@@ -281,23 +292,25 @@ h2 {
   font-size: 1.1em;
   font-weight: bold;
   padding: 40px 0 44px 0;
-  margin: 0 4.54%;
 }
-.example-house:nth-child(1) .fas.fa-star:nth-child(5),
-.example-house:nth-child(2) .fas.fa-star:nth-child(5),
-.example-house:nth-child(3) .fas.fa-star:nth-child(5),
-.example-house:nth-child(4) .fas.fa-star:nth-child(4),
-.example-house:nth-child(4) .fas.fa-star:nth-child(5),
-.example-house:nth-child(5) .fas.fa-star:nth-child(5),
-.example-house:nth-child(6) .fas.fa-star:nth-child(5) {
+.container-examples-house a:nth-child(1) .fas.fa-star:nth-child(5),
+.container-examples-house a:nth-child(3) .fas.fa-star:nth-child(5), 
+.container-examples-house a:nth-child(4) .fas.fa-star:nth-child(5),
+.container-examples-house a:nth-child(4) .fas.fa-star:nth-child(4),
+.container-examples-house a:nth-child(5) .fas.fa-star:nth-child(5)
+{
   color: #d9d9d9;
-  font-size: 0.5rem;
+  font-size: 0.8rem;
 }
 /* house & popular : stars more-information */
+.stars{
+  display: flex;
+  align-items: center;
+}
 .stars .fas.fa-star {
   display: inline-flex;
   color: #0065fc;
-  font-size: 0.5rem;
+  font-size: 0.8rem;
 }
 p.more-information {
   font-size: 0.8rem;
@@ -306,6 +319,8 @@ p.more-information {
 }
 /* popular */
 .popular {
+  display: flex;
+  flex-flow: column nowrap;
   width: 31.3%;
   background-color: #f2f2f2;
   border-radius: 15px;
@@ -313,22 +328,27 @@ p.more-information {
 .container-examples-popular {
   display: flex;
   flex-flow: column nowrap;
+  align-content: space-between;
   align-items: center;
   margin-top: 28px;
-  padding: 0 4.54%;
+  padding: 0 8.79%;
+}
+.container-examples-popular a{
+  width: 100%;
+  min-width: 250px;
+}
+.container-example-popular{
+  display: flex;
+  width: 100%;
+  height: 134px;
+  box-shadow: 0px 1px 10px 0.5px rgb(201, 200, 200);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 5px solid white;
+  margin-bottom: 31px;
 }
 .example-popular {
   display: flex;
-  height: 134px;
-  width: 100%;
-  min-width: 343px;
-  border: 5px solid white;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0px 1px 10px 0.5px rgb(201, 200, 200);
-  margin-bottom: 31px;
-}
-.example-popular a {
   width: 37.7%;
 }
 .photo-popular {
@@ -342,9 +362,8 @@ p.more-information {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  padding: 45px 4.54% 0 4.54%;
+  padding: 45px 8.79% 0 8.79%;
   width: 100%;
-  min-width: 343px;
 }
 .title-popular h2 {
   font-size: 1.4rem;
@@ -352,16 +371,21 @@ p.more-information {
 .fas.fa-chart-line {
   font-size: 1.4em;
 }
-.example-popular:nth-child(2) .fas.fa-star:nth-child(5),
-.example-popular:nth-child(3) .fas.fa-star:nth-child(5) {
+.container-examples-popular a:nth-child(2) .stars .fas.fa-star:nth-child(5),
+.container-examples-popular a:nth-child(3) .stars .fas.fa-star:nth-child(5){
   color: #d9d9d9;
-  font-size: 0.5rem;
+  font-size: 0.8rem;
+}
+.container-examples-popular a h2
+{
+  padding-right: 50px;
 }
 .description-popular {
   display: flex;
   flex-flow: column nowrap;
-  padding: 10px 0 0 21px;
-  width: calc(100% - 37.7%);
+  justify-content: space-evenly;
+  padding-left: 21px;
+  width: calc(100% - 37.7%); 
   background-color: #ffffff;
 }
 .description-popular h2 {
@@ -405,7 +429,6 @@ p.more-information {
   font-weight: bolder;
 }
 .activity-1 {
-  /* width: 302px; */
   width: 20.97%;
   height: 445px;
   border-radius: 20px;
@@ -519,8 +542,15 @@ footer {
 .footer-part:nth-child(3) .footer-part-ajust:nth-child(4) {
   color: #f2f2f2;
 }
+@media screen and (max-width: 1439px) {
+  /* POPULAR */
+  .container-examples-popular a h2
+{
+  padding-right: 0;
+}
+}
 
-@media screen and (max-width: 1339px) {
+@media screen and (max-width: 1024px) {
   /* ------------------------------- HEADER -------------------------- */
   header {
     padding: 0 20px;
@@ -586,30 +616,17 @@ footer {
     background-color: #ffffff;
     border-radius: 0;
   }
-  .container-examples-house {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 5%;
-    align-content: space-between;
-    width: 100%;
-  }
   .example-house {
-    width: 100%;
-    height: 320px;
-  }
-  .photo-example-house {
-    height: 200px;
     width: 100%;
   }
   .description-house {
-    height: 110px;
+    height: 100px;
     background-color: #ffffff;
   }
   .description-house .stars .fas.fa-star {
     display: inline-flex;
     color: #0065fc;
     font-size: 0.9rem;
-    padding-top: 3%;
   }
   .example-house:nth-child(1) .fas.fa-star:nth-child(5),
   .example-house:nth-child(2) .fas.fa-star:nth-child(5),
@@ -626,17 +643,12 @@ footer {
     width: 100%;
     background-color: #f2f2f2;
     border-radius: 0;
-    order: -1;
   }
   .container-examples-popular {
-    margin: 28px auto;
-    width: 100%;
+    padding: 0 4.54%;
   }
-  .example-popular {
-    height: 200px;
-  }
-  .example-popular a {
-    width: 50%;
+  .title-popular {
+  padding: 45px 4.54% 0 4.54%;
   }
   .description-popular .stars .fas.fa-star {
     display: inline-flex;
@@ -696,12 +708,7 @@ footer {
   .logo {
     padding-left: 21px;
   }
-  /* house */
 
-  .photo-example-house {
-    height: 220px;
-    width: 100%;
-  }
   /* ------------------------------- MAIN -------------------------- */
   /* main text */
   .text {
@@ -829,18 +836,7 @@ footer {
     height: 55px;
   }
   /* house */
-  .container-examples-house {
-    display: grid;
-    grid-template-columns: none;
-  }
-  .example-house {
-    width: 335px;
-    height: 199px;
-  }
-  .photo-example-house {
-    height: 114px;
-    width: 100%;
-  }
+  
   /* popular */
   .example-popular {
     height: 134px;
@@ -863,17 +859,30 @@ footer {
     padding-bottom: 28px;
   }
 }
+@media screen and (max-width: 500px) {
+  /* house */
+  .container-examples-house a{
+    width: 100%;
+  }
+}
 @media screen and (max-width: 375px) {
   ul li:nth-child(4) a {
     justify-content: flex-end;
     align-items: flex-end;
   }
   /* popular */
+  .popular{
+    order: -1;
+  }
   .example-popular {
     margin: 0 21px 11px 21px;
   }
   /* house */
+  .container-examples-house{
+    justify-content: space-between;
+  }
   .example-house {
     min-width: 343px;
   }
+  
 }
