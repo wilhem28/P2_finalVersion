@@ -520,7 +520,7 @@ footer {
   color: #f2f2f2;
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1339px) {
   /* ------------------------------- HEADER -------------------------- */
   header {
     padding: 0 20px;
