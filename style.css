@@ -34,7 +34,6 @@ ul li {
   font-size: 1rem;
   list-style: none;
 }
-
 ul li a {
   display: flex;
   align-items: center;
@@ -64,7 +63,6 @@ ul li:nth-child(4) a {
   font-weight: bolder;
   color: #0065fc;
 }
-
 /* ------------------------------- MAIN -------------------------- */
 main {
   padding: 0 50px;
@@ -249,7 +247,7 @@ input {
   padding: 0 4.54%;
 }
 .container-examples-house a{
-  width: 26.81%;
+  width: 30.5%;
   min-width: 225px;
 }
 .example-house {
@@ -322,6 +320,7 @@ p.more-information {
   display: flex;
   flex-flow: column nowrap;
   width: 31.3%;
+  min-width: 300px;
   background-color: #f2f2f2;
   border-radius: 15px;
 }
@@ -335,7 +334,7 @@ p.more-information {
 }
 .container-examples-popular a{
   width: 100%;
-  min-width: 250px;
+  min-width: 260px;
 }
 .container-example-popular{
   display: flex;
@@ -376,10 +375,6 @@ p.more-information {
   color: #d9d9d9;
   font-size: 0.8rem;
 }
-.container-examples-popular a h2
-{
-  padding-right: 50px;
-}
 .description-popular {
   display: flex;
   flex-flow: column nowrap;
@@ -405,18 +400,17 @@ p.more-information {
   display: flex;
   font-size: 1.4rem;
 }
-#activities h2 a {
-  text-decoration: none;
-  color: #000000;
-  font-size: 1.4375rem;
-  cursor: pointer;
-}
 .examples-activities {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   width: 100%;
   padding-top: 26px;
+}
+.examples-activities a{
+  display: flex;
+  width: 20.97%;
+  border: 1px solid red;
 }
 .container-location-activity {
   display: flex;
@@ -429,7 +423,7 @@ p.more-information {
   font-weight: bolder;
 }
 .activity-1 {
-  width: 20.97%;
+  width: 100%;
   height: 445px;
   border-radius: 20px;
   box-shadow: 0px 3px 5px 1px rgb(224, 223, 223);
@@ -440,7 +434,6 @@ p.more-information {
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between;
-  /* width: 302px; */
   width: 20.97%;
   height: 445px;
 }
@@ -455,6 +448,9 @@ p.more-information {
   width: 100%;
   border-radius: 20px;
   box-shadow: 0px 3px 5px 1px rgb(224, 223, 223);
+}
+.container-activity-1-photo-1{
+  width: 100%;
 }
 .activity-1-photo-1,
 .photo-up a,
@@ -542,14 +538,6 @@ footer {
 .footer-part:nth-child(3) .footer-part-ajust:nth-child(4) {
   color: #f2f2f2;
 }
-@media screen and (max-width: 1439px) {
-  /* POPULAR */
-  .container-examples-popular a h2
-{
-  padding-right: 0;
-}
-}
-
 @media screen and (max-width: 1024px) {
   /* ------------------------------- HEADER -------------------------- */
   header {
@@ -597,16 +585,15 @@ footer {
   }
   /* ------------------------------- main section activities -------------------------- */
   .examples-activities {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
+    padding: 26px 4.54% 0 4.54%;
   }
   .activity-1 {
     width: 100%;
-    height: 445px;
+    height: 300px;
     border-radius: 20px;
     box-shadow: 0px 3px 5px 1px rgb(224, 223, 223);
     overflow: hidden;
+    margin-bottom: 30px;
   }
   /* house */
   .house {
@@ -667,17 +654,12 @@ footer {
     width: 100%;
     padding: 0 4.54%;
   }
-  .activity-1 {
-    order: 1;
-    width: 80%;
-    height: 300px;
-  }
   .activity-2,
   .activity-4 {
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
-    width: 80%;
+    width: 100%;
     height: auto;
   }
   .activity-2-up,
@@ -802,11 +784,6 @@ footer {
   }
 
   /* ------------------------------- main section activities -------------------------- */
-  .examples-activities {
-    grid-template-columns: none;
-    justify-content: center;
-    padding: 28px 4.54% 0 4.54%;
-  }
   #activities h2 {
     font-size: 1.4rem;
     padding: 0 4.54%;
@@ -817,7 +794,6 @@ footer {
   .activity-4-up,
   .activity-4-down {
     width: 100%;
-    min-width: 343px;
     height: 190px;
     margin-bottom: 30px;
   }
@@ -834,16 +810,6 @@ footer {
   }
   .container-location-activity {
     height: 55px;
-  }
-  /* house */
-  
-  /* popular */
-  .example-popular {
-    height: 134px;
-    width: auto;
-  }
-  .example-popular a {
-    width: 37.7%;
   }
   /* ------------------------------- FOOTER -------------------------- */
   footer {
@@ -874,15 +840,21 @@ footer {
   .popular{
     order: -1;
   }
-  .example-popular {
-    margin: 0 21px 11px 21px;
+  .description-popular .stars {
+    padding-top: 0;
   }
   /* house */
   .container-examples-house{
     justify-content: space-between;
   }
   .example-house {
-    min-width: 343px;
+    max-width: 343px;
   }
-  
+}
+@media screen and (max-width: 365px) {
+  /* main selection */
+  input{
+    width: 190px;
+  }
+
 }
