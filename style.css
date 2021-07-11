@@ -81,7 +81,7 @@ h1 {
 /* main selection */
 .selection {
   display: flex;
-  flex-direction: row nowrap;
+  flex-flow: row nowrap;
   height: 50px;
   border-right: 0px;
   margin: 20px 0 31px 0;
@@ -475,8 +475,11 @@ p.more-information {
   object-fit: cover;
   object-position: center;
 }
+.container-photo-down{
+  display: flex;
+  height: 106px;
+}
 .photo-down {
-  height: 109px;
   width: 100%;
   object-fit: cover;
   object-position: center;
@@ -514,7 +517,7 @@ p.more-information {
 }
 .container-photo-activity-4-down{
   display: flex;
-  height: 153px;
+  height: 148px;
 }
 .photo-activity-4-up,
 .photo-activity-4-down{
