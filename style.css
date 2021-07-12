@@ -237,7 +237,7 @@ input {
 }
 .title-house {
   width: 100%;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   padding: 45px 4.54% 0 4.54%;
 }
 .container-examples-house {
@@ -368,7 +368,7 @@ p.more-information {
   font-size: 1.25rem;
 }
 .fas.fa-chart-line {
-  font-size: 1.4em;
+  font-size: 1.3em;
 }
 .container-examples-popular a:nth-child(2) .stars .fas.fa-star:nth-child(5),
 .container-examples-popular a:nth-child(3) .stars .fas.fa-star:nth-child(5){
@@ -398,7 +398,7 @@ p.more-information {
 }
 #activities h2 {
   display: flex;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
 }
 .examples-activities {
   display: flex;
