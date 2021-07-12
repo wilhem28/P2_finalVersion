@@ -248,7 +248,7 @@ input {
 }
 .container-examples-house a{
   width: 30.5%;
-  min-width: 225px;
+  min-width: 190px;
 }
 .example-house {
   display: flex;
