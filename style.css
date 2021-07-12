@@ -237,7 +237,7 @@ input {
 }
 .title-house {
   width: 100%;
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   padding: 45px 4.54% 0 4.54%;
 }
 .container-examples-house {
@@ -365,7 +365,7 @@ p.more-information {
   width: 100%;
 }
 .title-popular h2 {
-  font-size: 1.4rem;
+  font-size: 1.25rem;
 }
 .fas.fa-chart-line {
   font-size: 1.4em;
@@ -398,7 +398,7 @@ p.more-information {
 }
 #activities h2 {
   display: flex;
-  font-size: 1.4rem;
+  font-size: 1.25rem;
 }
 .examples-activities {
   display: flex;
